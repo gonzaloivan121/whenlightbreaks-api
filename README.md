@@ -75,6 +75,14 @@ npm run dev
 
 Your server should now be running at `http://localhost:3000`.
 
+## API Collections
+
+To easily test and interact with the endpoints, you can import the pre-configured API collections located in the `assets/collections` folder into your preferred client:
+
+- [OpenAPI / Standard JSON](./assets/collections/When%20Light%20Breaks%20API.json)
+- [Postman Collection](./assets/collections/When%20Light%20Breaks%20API.postman_collection.json)
+- [Requestly Collection](./assets/collections/When%20Light%20Breaks%20API.requestly.json)
+
 ## Available Scripts
 
 Here is a list of commands you can run via `npm run <script>`:
