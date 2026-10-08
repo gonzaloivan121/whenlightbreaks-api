@@ -26,6 +26,23 @@ export const relations = defineRelations(schema, (r) => ({
             to: r.ArtistTable.id,
         }),
     },
+    InvoiceTable: {
+        order: r.one.OrderTable({
+            from: r.InvoiceTable.orderId,
+            to: r.OrderTable.id,
+        }),
+        user: r.one.UserTable({
+            from: r.InvoiceTable.userId,
+            to: r.UserTable.id,
+        }),
+    },
+    OrderTable: {
+        invoices: r.many.InvoiceTable(),
+        user: r.one.UserTable({
+            from: r.OrderTable.userId,
+            to: r.UserTable.id,
+        }),
+    },
     SongTable: {
         album: r.one.AlbumTable({
             from: r.SongTable.albumId,
@@ -38,5 +55,7 @@ export const relations = defineRelations(schema, (r) => ({
     },
     UserTable: {
         apiKeys: r.many.ApiKeyTable(),
+        invoices: r.many.InvoiceTable(),
+        orders: r.many.OrderTable(),
     },
 }));
