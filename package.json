@@ -1,0 +1,35 @@
+{
+    "name": "whenlightbreaks-api",
+    "type": "module",
+    "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "docker": "docker-compose up",
+        "db:generate": "npx drizzle-kit generate",
+        "db:migrate": "npx drizzle-kit migrate",
+        "db:pull": "npx drizzle-kit pull",
+        "db:push": "npx drizzle-kit push",
+        "db:studio": "npx drizzle-kit studio",
+        "db:up": "npx drizzle-kit up",
+        "db:check": "npx drizzle-kit check",
+        "db:export": "npx drizzle-kit export",
+        "db:setup": "npm run db:generate && npm run db:migrate"
+    },
+    "dependencies": {
+        "@hono/node-server": "^1.19.14",
+        "@hono/standard-validator": "^0.2.2",
+        "dotenv": "^17.4.2",
+        "drizzle-orm": "^1.0.0-rc.3",
+        "hono": "^4.12.23",
+        "pg": "^8.21.0",
+        "zod": "^4.4.3"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.17",
+        "@types/pg": "^8.20.0",
+        "drizzle-kit": "^1.0.0-rc.3",
+        "tsx": "^4.7.1",
+        "typescript": "^5.8.3"
+    }
+}
