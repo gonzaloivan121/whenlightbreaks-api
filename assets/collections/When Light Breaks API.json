@@ -1,0 +1,341 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "When Light Breaks API",
+    "description": "Exported from Requestly API Client",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "{BASE_URL}",
+      "variables": {
+        "BASE_URL": {
+          "default": "http://localhost:3000"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/{ROUTE}": {
+      "post": {
+        "summary": "Create",
+        "parameters": [
+          {
+            "name": "ROUTE",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "coverUrl": {
+                    "type": "string"
+                  },
+                  "albumUrl": {
+                    "type": "string"
+                  },
+                  "artistId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "title": "{{$randomLoremWords}}",
+                "coverUrl": "{{$randomImageUrl}}",
+                "albumUrl": "{{$randomUrl}}",
+                "artistId": "{{LAST_ARTIST_ID}}"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKey_X_API_Key": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "get": {
+        "summary": "List",
+        "parameters": [
+          {
+            "name": "ROUTE",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey_X_API_Key": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/{ROUTE}/{id}": {
+      "delete": {
+        "summary": "Delete",
+        "parameters": [
+          {
+            "name": "ROUTE",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{LAST_ID}}"
+          }
+        ],
+        "security": [
+          {
+            "apiKey_X_API_Key": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "get": {
+        "summary": "Get",
+        "parameters": [
+          {
+            "name": "ROUTE",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{LAST_ID}}"
+          }
+        ],
+        "security": [
+          {
+            "apiKey_X_API_Key": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update",
+        "parameters": [
+          {
+            "name": "ROUTE",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "{{LAST_ID}}"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "coverUrl": {
+                    "type": "string"
+                  },
+                  "albumUrl": {
+                    "type": "string"
+                  },
+                  "artistId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "title": "{{$randomLoremWords}}",
+                "coverUrl": "{{$randomImageUrl}}",
+                "albumUrl": "{{$randomUrl}}",
+                "artistId": "{{LAST_ARTIST_ID}}"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKey_X_API_Key": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/{ROUTE}/login": {
+      "post": {
+        "summary": "Login",
+        "parameters": [
+          {
+            "name": "ROUTE",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "username": "{{LAST_USERNAME}}",
+                "password": "{{LAST_PASSWORD}}"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKey_X_API_Key": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/{ROUTE}/register": {
+      "post": {
+        "summary": "Register",
+        "parameters": [
+          {
+            "name": "ROUTE",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "phone": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "firstName": "{{$randomFirstName}}",
+                "lastName": "{{$randomLastName}}",
+                "username": "{{$randomUserName}}",
+                "password": "test1234567890",
+                "email": "{{$randomEmail}}",
+                "phone": "+12223334444"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKey_X_API_Key": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKey_X_API_Key": {
+        "type": "apiKey",
+        "name": "X-API-Key",
+        "in": "header"
+      }
+    }
+  }
+}

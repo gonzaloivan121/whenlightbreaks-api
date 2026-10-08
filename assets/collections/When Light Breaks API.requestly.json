@@ -1,0 +1,2602 @@
+{
+  "meta": {
+    "version": "1.1.0",
+    "exportedAt": "2026-10-08T22:31:08.418Z",
+    "exportedUsing": "Requestly API Client"
+  },
+  "records": [
+    {
+      "id": "8b532610-c322-418a-9a06-3e430d727ddd",
+      "name": "Albums",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "edc77a18-62d5-43bc-80e1-a28547c8a184",
+            "type": "string",
+            "syncValue": "albums",
+            "localValue": "albums",
+            "isPersisted": true,
+            "rank": "hmpo8kj6k",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T16:04:22.960Z",
+            "updatedAt": "2026-05-27T16:04:22.960Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": null
+    },
+    {
+      "id": "5f1c7e90-9e9f-4fad-99ed-9bc7647f3a3a",
+      "name": "Auth",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "62cd247a-61cf-4bcf-9921-31e09da64db0",
+            "type": "string",
+            "syncValue": "auth",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpoc2s3h",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T17:50:19.632Z",
+            "updatedAt": "2026-05-27T17:50:19.632Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": null
+    },
+    {
+      "id": "2a6da602-dd19-481e-b482-504883de3a6f",
+      "name": "API Keys",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "bearer_token",
+          "token": "{{JWT}}"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "a3e827e5-c597-4b95-a23e-574f2465ea43",
+            "type": "string",
+            "syncValue": "api-keys",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpoepeu6",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T18:37:38.337Z",
+            "updatedAt": "2026-05-27T18:37:38.337Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": null
+    },
+    {
+      "id": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "name": "When Light Breaks API",
+      "description": "",
+      "type": "collection",
+      "parentId": null,
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "api_key",
+          "key": "X-API-Key",
+          "value": "{{API_KEY}}",
+          "placement": "header"
+        },
+        "variables": {
+          "LAST_API_KEY_ID": {
+            "id": "f093fdd9-744f-4de9-8505-eb94f49fc90e",
+            "type": "string",
+            "syncValue": "",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmv024sqg",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:20:59.100Z",
+            "updatedAt": "2026-10-08T22:20:59.100Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_CONCERT_ID": {
+            "id": "2d4efd27-4b55-4675-8c26-6ecfb53add6a",
+            "type": "string",
+            "syncValue": "",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmv032m9j",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:09:16.624Z",
+            "updatedAt": "2026-10-08T22:09:16.624Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_INVOICE_ID": {
+            "id": "471b4cc6-c8a3-4190-a1f0-ee27d25ec3d5",
+            "type": "string",
+            "syncValue": "",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmv032rhy",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:09:16.624Z",
+            "updatedAt": "2026-10-08T22:09:16.624Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_NAVIGATION_LINK_ID": {
+            "id": "0ed9f696-abb6-46ee-b545-d544eebeff58",
+            "type": "string",
+            "syncValue": "",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmv032w2u",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:09:16.624Z",
+            "updatedAt": "2026-10-08T22:09:16.624Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_ORDER_ID": {
+            "id": "0e368b53-ca3f-4a6f-ba60-6c1565a10c1b",
+            "type": "string",
+            "syncValue": "",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmv032xr7",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:09:16.624Z",
+            "updatedAt": "2026-10-08T22:09:16.624Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_PRODUCT_ID": {
+            "id": "f38cc3f8-e9a7-4907-b10d-c9b12cd83a5e",
+            "type": "string",
+            "syncValue": "",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmv0337hs",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:09:16.624Z",
+            "updatedAt": "2026-10-08T22:09:16.624Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_SOCIAL_LINK_ID": {
+            "id": "80cf20b8-a887-4785-960f-787e4c112ba3",
+            "type": "string",
+            "syncValue": "",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmv033euu",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:09:16.624Z",
+            "updatedAt": "2026-10-08T22:09:16.624Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_SONG_ID": {
+            "id": "45405fc6-6b3b-4305-8c4e-5b0bf207bd47",
+            "type": "string",
+            "syncValue": "",
+            "localValue": "ab7423ec-3997-4913-8443-fc1da20d6d24",
+            "isPersisted": true,
+            "rank": "hmv033mpy",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:09:16.624Z",
+            "updatedAt": "2026-10-08T22:09:16.624Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_STREAMING_LINK_ID": {
+            "id": "1937cf00-0d03-4bba-8b36-6338f709cb89",
+            "type": "string",
+            "syncValue": "",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmv033r9n",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:09:16.624Z",
+            "updatedAt": "2026-10-08T22:09:16.624Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_USER_ID": {
+            "id": "61fb6008-7868-401c-9146-89db48220ec6",
+            "type": "string",
+            "syncValue": "",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmv033w6y",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:09:16.624Z",
+            "updatedAt": "2026-10-08T22:09:16.624Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_PASSWORD": {
+            "id": "86f83aa8-0cbd-466e-8149-b5db3d953e92",
+            "type": "string",
+            "syncValue": "test1234567890",
+            "localValue": "test1234567890",
+            "isPersisted": true,
+            "rank": "hmv033w6z",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:11:33.299Z",
+            "updatedAt": "2026-10-08T22:11:33.299Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_USERNAME": {
+            "id": "de6ec323-eda8-4694-b7bc-5b26178835af",
+            "type": "string",
+            "syncValue": "Leann_Larkin53",
+            "localValue": "Leann_Larkin53",
+            "isPersisted": true,
+            "rank": "hmv033w71",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:15:37.643Z",
+            "updatedAt": "2026-10-08T22:15:37.643Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_ID": {
+            "id": "e029d74f-2fbb-4080-b38e-b50338955785",
+            "type": "string",
+            "syncValue": "fd52f93f-d47b-4afe-ba75-0ac7fc554659",
+            "localValue": "fd52f93f-d47b-4afe-ba75-0ac7fc554659",
+            "isPersisted": true,
+            "rank": "hmv033w72",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:16:08.784Z",
+            "updatedAt": "2026-10-08T22:16:08.784Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_ARTIST_ID": {
+            "id": "9bed9d0a-6b56-4394-95e5-9502e99af22b",
+            "type": "string",
+            "syncValue": "259584e3-ca07-4c35-8a2b-f9848eb961b6",
+            "localValue": "394f2d05-06cd-4367-896d-9320219c9424",
+            "isPersisted": true,
+            "rank": "hmv033w73",
+            "isEnabled": true,
+            "createdAt": "2026-10-08T22:17:40.545Z",
+            "updatedAt": "2026-10-08T22:17:40.545Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          },
+          "LAST_ALBUM_ID": {
+            "id": "dd491664-8324-4627-8619-286d2c154fb8",
+            "syncValue": "fb7a7078-13bd-48bf-b9c7-7f89b50f4eb3",
+            "localValue": "fb7a7078-13bd-48bf-b9c7-7f89b50f4eb3",
+            "type": "string",
+            "isEnabled": true,
+            "isPersisted": true,
+            "createdAt": "2026-10-08T22:21:25.932Z",
+            "updatedAt": "2026-10-08T22:21:25.932Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": null
+    },
+    {
+      "id": "c9703c05-65de-4aa1-bdf6-5d00e66a4803",
+      "name": "Create",
+      "type": "api",
+      "parentId": "8b532610-c322-418a-9a06-3e430d727ddd",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"title\": \"{{$randomLoremWords}}\",\n  \"coverUrl\": \"{{$randomImageUrl}}\",\n  \"albumUrl\": \"{{$randomUrl}}\",\n  \"artistId\": \"{{LAST_ARTIST_ID}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_ALBUM_ID\", rq.response.json().id)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "bc4794f9-b985-4b55-ad30-2f2336001cfe",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "8b532610-c322-418a-9a06-3e430d727ddd",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "",
+            "rawContentType": "text/plain"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "67a1b0f7-0d67-4560-94bf-643087412a91",
+      "name": "Get",
+      "type": "api",
+      "parentId": "8b532610-c322-418a-9a06-3e430d727ddd",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "d72dcb61-7fc7-42d7-ab1a-06c18e7b02b2",
+      "name": "List",
+      "type": "api",
+      "parentId": "8b532610-c322-418a-9a06-3e430d727ddd",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "000f5e1a-7d26-4d1f-babd-095216326c5a",
+      "name": "Update",
+      "type": "api",
+      "parentId": "8b532610-c322-418a-9a06-3e430d727ddd",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "PUT",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"title\": \"{{$randomLoremWords}}\",\n  \"coverUrl\": \"{{$randomImageUrl}}\",\n  \"albumUrl\": \"{{$randomUrl}}\",\n  \"artistId\": \"{{LAST_ARTIST_ID}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "1980f653-b192-499d-a3cb-fec02cbbfcdd",
+      "name": "Create",
+      "type": "api",
+      "parentId": "2a6da602-dd19-481e-b482-504883de3a6f",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"name\": \"{{$randomCompanyName}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_API_KEY_ID\", rq.response.json().id)\n  rq.environment.set(\"API_KEY\", rq.response.json().key)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "28f2f531-9713-419c-8acb-4003ae2290e5",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "2a6da602-dd19-481e-b482-504883de3a6f",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "b35629fe-5d28-4b2b-bcdf-3ff32f5d9b5c",
+      "name": "List",
+      "type": "api",
+      "parentId": "2a6da602-dd19-481e-b482-504883de3a6f",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "746baf22-4532-4af0-8c41-c914a6f16c5a",
+      "name": "Artists",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "edc77a18-62d5-43bc-80e1-a28547c8a184",
+            "type": "string",
+            "syncValue": "artists",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpo8kj6k",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T16:04:22.960Z",
+            "updatedAt": "2026-05-27T16:04:22.960Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": null
+    },
+    {
+      "id": "8a83ea9c-04d5-4a7a-9b65-10895cfce6f0",
+      "name": "Create",
+      "type": "api",
+      "parentId": "746baf22-4532-4af0-8c41-c914a6f16c5a",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"name\": \"{{$randomLoremWords}}\",\n  \"artistUrl\": \"{{$randomUrl}}\",\n  \"pictureUrl\": \"{{$randomImageUrl}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_ARTIST_ID\", rq.response.json().id)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "f7e53ef7-4a76-48fb-80d6-3dacd6918b5a",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "746baf22-4532-4af0-8c41-c914a6f16c5a",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "",
+            "rawContentType": "text/plain"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "ac081706-7fd2-4113-bf6f-490517e58650",
+      "name": "Get",
+      "type": "api",
+      "parentId": "746baf22-4532-4af0-8c41-c914a6f16c5a",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "ca3bc9e5-15a0-47c0-bd75-2e770f6d0ee1",
+      "name": "List",
+      "type": "api",
+      "parentId": "746baf22-4532-4af0-8c41-c914a6f16c5a",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "60cf1b4f-546b-4b34-94dd-2c9a0c3e3e21",
+      "name": "Update",
+      "type": "api",
+      "parentId": "746baf22-4532-4af0-8c41-c914a6f16c5a",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "PUT",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"name\": \"{{$randomLoremWords}}\",\n  \"artistUrl\": \"{{$randomUrl}}\",\n  \"pictureUrl\": \"{{$randomImageUrl}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "59a2beae-020b-49b2-b306-b69d24067176",
+      "name": "Login",
+      "type": "api",
+      "parentId": "5f1c7e90-9e9f-4fad-99ed-9bc7647f3a3a",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/login",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"username\": \"{{LAST_USERNAME}}\",\n  \"password\": \"{{LAST_PASSWORD}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "scripts": {
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.environment.set(\"JWT\", rq.response.json().token)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "cf2c2e0c-a67d-4bd9-b364-b16cbfda751f",
+      "name": "Register",
+      "type": "api",
+      "parentId": "5f1c7e90-9e9f-4fad-99ed-9bc7647f3a3a",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/register",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"firstName\": \"{{$randomFirstName}}\",\n  \"lastName\": \"{{$randomLastName}}\",\n  \"username\": \"{{$randomUserName}}\",\n  \"password\": \"test1234567890\",\n  \"email\": \"{{$randomEmail}}\",\n  \"phone\": \"+12223334444\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_USERNAME\", rq.response.json().username)\n  rq.collectionVariables.set(\"LAST_PASSWORD\", rq.request.body.formdata[\"password\"])\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "2346cac0-344b-4f26-9f9e-76e5cbb980e1",
+      "name": "Concerts",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "edc77a18-62d5-43bc-80e1-a28547c8a184",
+            "type": "string",
+            "syncValue": "concerts",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpo8kj6k",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T16:04:22.960Z",
+            "updatedAt": "2026-05-27T16:04:22.960Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": null
+    },
+    {
+      "id": "30c53950-fd41-4b64-8833-66687268e6d4",
+      "name": "Create",
+      "type": "api",
+      "parentId": "2346cac0-344b-4f26-9f9e-76e5cbb980e1",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"title\": \"{{$randomLoremWords}}\",\n  \"subtitle\": \"{{$randomLoremWords}}\",\n  \"venue\": \"{{$randomLoremWord}}\",\n  \"city\": \"{{$randomCity}}\",\n  \"state\": \"{{$randomLoremWord}}\",\n  \"country\": \"{{$randomCountry}}\",\n  \"directionsUrl\": \"{{$randomUrl}}\",\n  \"date\": \"{{$randomDatePast}}\",\n  \"status\": \"available\",\n  \"ticketsUrl\": \"{{$randomUrl}}\",\n  artistId: \"{{LAST_ARTIST_ID}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_CONCERT_ID\", rq.response.json().id)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "7a5a46cd-2d42-4f2b-a93f-41ee5c491d1d",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "2346cac0-344b-4f26-9f9e-76e5cbb980e1",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "",
+            "rawContentType": "text/plain"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "f2ffbd65-5035-4657-8050-40fa4490f79f",
+      "name": "Get",
+      "type": "api",
+      "parentId": "2346cac0-344b-4f26-9f9e-76e5cbb980e1",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "fcdc73b5-a716-4818-b6ff-c80454c163af",
+      "name": "List",
+      "type": "api",
+      "parentId": "2346cac0-344b-4f26-9f9e-76e5cbb980e1",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "506e813e-9c4e-4485-ab63-6da53e5db80c",
+      "name": "Update",
+      "type": "api",
+      "parentId": "2346cac0-344b-4f26-9f9e-76e5cbb980e1",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "PUT",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"title\": \"{{$randomLoremWords}}\",\n  \"subtitle\": \"{{$randomLoremWords}}\",\n  \"venue\": \"{{$randomLoremWord}}\",\n  \"city\": \"{{$randomCity}}\",\n  \"state\": \"{{$randomLoremWord}}\",\n  \"country\": \"{{$randomCountry}}\",\n  \"directionsUrl\": \"{{$randomUrl}}\",\n  \"date\": \"{{$randomDatePast}}\",\n  \"status\": \"available\",\n  \"ticketsUrl\": \"{{$randomUrl}}\",\n  artistId: \"{{LAST_ARTIST_ID}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "0fd94d72-3cb5-445b-a656-3547450c9bea",
+      "name": "Invoices",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "edc77a18-62d5-43bc-80e1-a28547c8a184",
+            "type": "string",
+            "syncValue": "invoices",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpo8kj6k",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T16:04:22.960Z",
+            "updatedAt": "2026-05-27T16:04:22.960Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": "acu"
+    },
+    {
+      "id": "a035298c-5c92-49d0-8012-e18301acfb1a",
+      "name": "Create",
+      "type": "api",
+      "parentId": "0fd94d72-3cb5-445b-a656-3547450c9bea",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"amount\": \"{{$randomPrice}}\",\n  \"status\": \"pending\",\n  \"userId\": \"{{LAST_USER_ID}}\",\n  \"orderId\": \"{{LAST_ORDER_ID}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_INVOICE_ID\", rq.response.json().id)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "87160b30-2553-417a-8811-c1ede9bed095",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "0fd94d72-3cb5-445b-a656-3547450c9bea",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "",
+            "rawContentType": "text/plain"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "b2028800-7cc9-4e9a-a77b-148211a5ed50",
+      "name": "Get",
+      "type": "api",
+      "parentId": "0fd94d72-3cb5-445b-a656-3547450c9bea",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "e55de7f2-af30-4123-8c34-68544d19c3fb",
+      "name": "List",
+      "type": "api",
+      "parentId": "0fd94d72-3cb5-445b-a656-3547450c9bea",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "7f71be00-5fb1-45c1-b565-233fc93d5561",
+      "name": "Update",
+      "type": "api",
+      "parentId": "0fd94d72-3cb5-445b-a656-3547450c9bea",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "PUT",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"amount\": \"{{$randomPrice}}\",\n  \"status\": \"pending\",\n  \"userId\": \"{{LAST_USER_ID}}\",\n  \"orderId\": \"{{LAST_ORDER_ID}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "a6f34aa4-ea7e-4f29-a1db-f3f6077dbfed",
+      "name": "Navigation Links",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "edc77a18-62d5-43bc-80e1-a28547c8a184",
+            "type": "string",
+            "syncValue": "navigation-links",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpo8kj6k",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T16:04:22.960Z",
+            "updatedAt": "2026-05-27T16:04:22.960Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": "acx"
+    },
+    {
+      "id": "67ba8a58-b8f5-43f7-bbb7-556a5e2ca408",
+      "name": "Create",
+      "type": "api",
+      "parentId": "a6f34aa4-ea7e-4f29-a1db-f3f6077dbfed",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"label\": \"{{$randomWord}}\",\n  \"icon\": \"{{$randomWord}}\",\n  \"url\": \"{{$randomUrl}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_NAVIGATION_LINK_ID\", rq.response.json().id)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "bd4efff4-0e84-4f0d-8276-979325308975",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "a6f34aa4-ea7e-4f29-a1db-f3f6077dbfed",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "",
+            "rawContentType": "text/plain"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "7cc55eba-5d91-467e-a8d1-c176a3c126c2",
+      "name": "Get",
+      "type": "api",
+      "parentId": "a6f34aa4-ea7e-4f29-a1db-f3f6077dbfed",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "209c453a-112a-4cc3-be7b-ac345ab41505",
+      "name": "List",
+      "type": "api",
+      "parentId": "a6f34aa4-ea7e-4f29-a1db-f3f6077dbfed",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "ab24f720-7550-4c17-963a-db9724877d1d",
+      "name": "Update",
+      "type": "api",
+      "parentId": "a6f34aa4-ea7e-4f29-a1db-f3f6077dbfed",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "PUT",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"label\": \"{{$randomWord}}\",\n  \"icon\": \"{{$randomWord}}\",\n  \"url\": \"{{$randomUrl}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "81073f18-e58c-4965-bdbb-405da97b5043",
+      "name": "Orders",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "edc77a18-62d5-43bc-80e1-a28547c8a184",
+            "type": "string",
+            "syncValue": "orders",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpo8kj6k",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T16:04:22.960Z",
+            "updatedAt": "2026-05-27T16:04:22.960Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": "acz"
+    },
+    {
+      "id": "ab7d3706-0135-4ab6-b6e0-024a50acc484",
+      "name": "Create",
+      "type": "api",
+      "parentId": "81073f18-e58c-4965-bdbb-405da97b5043",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"amount\": \"{{$randomPrice}}\",\n  \"status\": \"pending\",\n  \"userId\": \"{{LAST_USER_ID}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_ORDER_ID\", rq.response.json().id)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "12c3e8d9-e99c-4fc0-97cd-a069d104fb53",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "81073f18-e58c-4965-bdbb-405da97b5043",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "",
+            "rawContentType": "text/plain"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "dc4b08e8-05d9-410d-be20-ec76ee4dbd5e",
+      "name": "Get",
+      "type": "api",
+      "parentId": "81073f18-e58c-4965-bdbb-405da97b5043",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "d1a70f87-0e8a-423a-9add-892f77be8ac7",
+      "name": "List",
+      "type": "api",
+      "parentId": "81073f18-e58c-4965-bdbb-405da97b5043",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "f66f5c1e-678d-44b4-82e4-9a2854d0ef79",
+      "name": "Update",
+      "type": "api",
+      "parentId": "81073f18-e58c-4965-bdbb-405da97b5043",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "PUT",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"amount\": \"{{$randomPrice}}\",\n  \"status\": \"pending\",\n  \"userId\": \"{{LAST_USER_ID}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "7b3dcf88-c8bc-4fcd-a2ce-baf8fdb5b78c",
+      "name": "Products",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "edc77a18-62d5-43bc-80e1-a28547c8a184",
+            "type": "string",
+            "syncValue": "products",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpo8kj6k",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T16:04:22.960Z",
+            "updatedAt": "2026-05-27T16:04:22.960Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": "aczG"
+    },
+    {
+      "id": "e0490066-96db-4b7b-b7ac-b0ad6d0d78a8",
+      "name": "Create",
+      "type": "api",
+      "parentId": "7b3dcf88-c8bc-4fcd-a2ce-baf8fdb5b78c",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"name\": \"{{$randomProductName}}\",\n  \"description\": \"{{$randomLoremParagraphs}}\",\n  \"price\": \"{{$randomPrice}}\",\n  \"imageUrl\": \"{{$randomImageUrl}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_PRODUCT_ID\", rq.response.json().id)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "da297a94-c41d-49d5-86e6-7536bfa3b897",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "7b3dcf88-c8bc-4fcd-a2ce-baf8fdb5b78c",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "",
+            "rawContentType": "text/plain"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "aaa03699-bf19-4842-a241-f0f5c53516a3",
+      "name": "Get",
+      "type": "api",
+      "parentId": "7b3dcf88-c8bc-4fcd-a2ce-baf8fdb5b78c",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "9e57ef9b-a3c5-49f3-9883-7a49b4ef6c88",
+      "name": "List",
+      "type": "api",
+      "parentId": "7b3dcf88-c8bc-4fcd-a2ce-baf8fdb5b78c",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "ce4e8650-cf28-4f35-957b-858d3b5c7f1d",
+      "name": "Update",
+      "type": "api",
+      "parentId": "7b3dcf88-c8bc-4fcd-a2ce-baf8fdb5b78c",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "PUT",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"name\": \"{{$randomProductName}}\",\n  \"description\": \"{{$randomLoremParagraphs}}\",\n  \"price\": \"{{$randomPrice}}\",\n  \"imageUrl\": \"{{$randomImageUrl}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "d5589181-118d-4ba4-9a48-f49adab4f722",
+      "name": "Social Links",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "edc77a18-62d5-43bc-80e1-a28547c8a184",
+            "type": "string",
+            "syncValue": "social-links",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpo8kj6k",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T16:04:22.960Z",
+            "updatedAt": "2026-05-27T16:04:22.960Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": "aczV"
+    },
+    {
+      "id": "9d0b1d0a-68fd-4f56-ad7a-c3b6b840a1d1",
+      "name": "Create",
+      "type": "api",
+      "parentId": "d5589181-118d-4ba4-9a48-f49adab4f722",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"label\": \"{{$randomWord}}\",\n  \"icon\": \"{{$randomWord}}\",\n  \"url\": \"{{$randomUrl}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_SOCIAL_LINK_ID\", rq.response.json().id)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "dcae7677-d947-4ae0-b765-a7a1a8c4f513",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "d5589181-118d-4ba4-9a48-f49adab4f722",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "",
+            "rawContentType": "text/plain"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "9352cbed-9629-4a9c-806e-995df790a498",
+      "name": "Get",
+      "type": "api",
+      "parentId": "d5589181-118d-4ba4-9a48-f49adab4f722",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "5f59fdc9-77e7-4ce2-b292-199702502ceb",
+      "name": "List",
+      "type": "api",
+      "parentId": "d5589181-118d-4ba4-9a48-f49adab4f722",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "3408b0f8-7b13-4c84-b5a1-25e975a4589c",
+      "name": "Update",
+      "type": "api",
+      "parentId": "d5589181-118d-4ba4-9a48-f49adab4f722",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "PUT",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"label\": \"{{$randomWord}}\",\n  \"icon\": \"{{$randomWord}}\",\n  \"url\": \"{{$randomUrl}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "9ae0d468-e27d-465d-8993-fa89f0282328",
+      "name": "Songs",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "edc77a18-62d5-43bc-80e1-a28547c8a184",
+            "type": "string",
+            "syncValue": "songs",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpo8kj6k",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T16:04:22.960Z",
+            "updatedAt": "2026-05-27T16:04:22.960Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": "aczl"
+    },
+    {
+      "id": "d221b669-bfaa-4fab-8763-ab3cc05496da",
+      "name": "Create",
+      "type": "api",
+      "parentId": "9ae0d468-e27d-465d-8993-fa89f0282328",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"title\": \"{{$randomLoremWords}}\",\n  \"coverUrl\": \"{{$randomImageUrl}}\",\n  \"songUrl\": \"{{$randomUrl}}\",\n  \"albumId\": \"{{LAST_ALBUM_ID}}\",\n  \"artistId\": \"{{LAST_ARTIST_ID}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_SONG_ID\", rq.response.json().id)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "fc8a5f39-516b-406b-b17d-6aae0a81ea2b",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "9ae0d468-e27d-465d-8993-fa89f0282328",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "",
+            "rawContentType": "text/plain"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "3931284e-b987-4ac0-8469-026973a86efe",
+      "name": "Get",
+      "type": "api",
+      "parentId": "9ae0d468-e27d-465d-8993-fa89f0282328",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "25af8017-da45-4665-98f4-6854552e4959",
+      "name": "List",
+      "type": "api",
+      "parentId": "9ae0d468-e27d-465d-8993-fa89f0282328",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "a8410b76-38fd-4554-97d7-82f7779dba69",
+      "name": "Update",
+      "type": "api",
+      "parentId": "9ae0d468-e27d-465d-8993-fa89f0282328",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "PUT",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"title\": \"{{$randomLoremWords}}\",\n  \"coverUrl\": \"{{$randomImageUrl}}\",\n  \"songUrl\": \"{{$randomUrl}}\",\n  \"albumId\": \"{{LAST_ALBUM_ID}}\",\n  \"artistId\": \"{{LAST_ARTIST_ID}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "52942840-d90d-4e71-ae07-3cff8c19b90f",
+      "name": "Streaming Links",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "edc77a18-62d5-43bc-80e1-a28547c8a184",
+            "type": "string",
+            "syncValue": "streaming-links",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpo8kj6k",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T16:04:22.960Z",
+            "updatedAt": "2026-05-27T16:04:22.960Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": "ad"
+    },
+    {
+      "id": "d715ddc5-40ff-4ebb-ade2-d1dedfcabb08",
+      "name": "Create",
+      "type": "api",
+      "parentId": "52942840-d90d-4e71-ae07-3cff8c19b90f",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"label\": \"{{$randomWord}}\",\n  \"icon\": \"{{$randomWord}}\",\n  \"url\": \"{{$randomUrl}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_STREAMING_LINK_ID\", rq.response.json().id)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "d2c54554-66c3-4b74-8d1f-ee663fbe7418",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "52942840-d90d-4e71-ae07-3cff8c19b90f",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "",
+            "rawContentType": "text/plain"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "d68ff74a-71d7-4e11-ae44-5d38b4fbb7c8",
+      "name": "Get",
+      "type": "api",
+      "parentId": "52942840-d90d-4e71-ae07-3cff8c19b90f",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "de9054cd-abc0-4110-b0f4-bda8ecafdee3",
+      "name": "List",
+      "type": "api",
+      "parentId": "52942840-d90d-4e71-ae07-3cff8c19b90f",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "20876c50-cd38-4ee4-b2b4-8c6851a42a29",
+      "name": "Update",
+      "type": "api",
+      "parentId": "52942840-d90d-4e71-ae07-3cff8c19b90f",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "PUT",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"label\": \"{{$randomWord}}\",\n  \"icon\": \"{{$randomWord}}\",\n  \"url\": \"{{$randomUrl}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "a848104b-2f3c-49c3-a896-d3c4412ca18e",
+      "name": "Users",
+      "description": "",
+      "type": "collection",
+      "parentId": "9dcbb638-5d97-4c65-be47-c4fbd94f1c1f",
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        },
+        "variables": {
+          "ROUTE": {
+            "id": "edc77a18-62d5-43bc-80e1-a28547c8a184",
+            "type": "string",
+            "syncValue": "users",
+            "localValue": "",
+            "isPersisted": true,
+            "rank": "hmpo8kj6k",
+            "isEnabled": true,
+            "createdAt": "2026-05-27T16:04:22.960Z",
+            "updatedAt": "2026-05-27T16:04:22.960Z",
+            "valueSource": {
+              "kind": "inline"
+            }
+          }
+        },
+        "overriddenSecrets": [],
+        "overrideSalt": ""
+      },
+      "rank": null
+    },
+    {
+      "id": "fd9edc4b-1b58-49b3-be32-31971401180e",
+      "name": "Create",
+      "type": "api",
+      "parentId": "a848104b-2f3c-49c3-a896-d3c4412ca18e",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "POST",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"firstName\": \"{{$randomFirstName}}\",\n  \"lastName\": \"{{$randomLastName}}\",\n  \"username\": \"{{$randomUserName}}\",\n  \"password\": \"test1234567890\",\n  \"email\": \"{{$randomEmail}}\",\n  \"phone\": \"{{$randomPhoneNumber}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        },
+        "scripts": {
+          "preRequest": "// **********************************************\n// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n",
+          "postResponse": "// **********************************************\n// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts\n// **********************************************\n\ntry {\n  rq.collectionVariables.set(\"LAST_USER_ID\", rq.response.json().id)\n} catch (error) {\n  console.error(error)\n}"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "facb6954-47d7-4fef-9669-3498f3d08132",
+      "name": "Delete",
+      "type": "api",
+      "parentId": "a848104b-2f3c-49c3-a896-d3c4412ca18e",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "DELETE",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "",
+            "rawContentType": "text/plain"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "df097f14-ac79-4c45-82ea-e5b00fe83576",
+      "name": "Get",
+      "type": "api",
+      "parentId": "a848104b-2f3c-49c3-a896-d3c4412ca18e",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "cfeddc4a-f97c-40d1-89a0-262053dcdffc",
+      "name": "List",
+      "type": "api",
+      "parentId": "a848104b-2f3c-49c3-a896-d3c4412ca18e",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "GET",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [],
+          "body": {
+            "contentType": "none"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    },
+    {
+      "id": "4c942c74-0241-473f-9126-1a5c805609fa",
+      "name": "Update",
+      "type": "api",
+      "parentId": "a848104b-2f3c-49c3-a896-d3c4412ca18e",
+      "deleted": false,
+      "data": {
+        "type": "http",
+        "request": {
+          "url": "{{BASE_URL}}/{{ROUTE}}/:id",
+          "overriddenSecrets": [],
+          "overrideSalt": "",
+          "method": "PUT",
+          "headers": [],
+          "queryParams": [],
+          "pathVariables": [
+            {
+              "key": "id",
+              "value": "{{LAST_ID}}",
+              "dataType": "string"
+            }
+          ],
+          "body": {
+            "contentType": "raw",
+            "raw": "{\n  \"firstName\": \"{{$randomFirstName}}\",\n  \"lastName\": \"{{$randomLastName}}\",\n  \"username\": \"{{$randomUserName}}\",\n  \"password\": \"{{PASSWORD}}\",\n  \"email\": \"{{$randomEmail}}\",\n  \"phone\": \"{{$randomPhoneNumber}}\"\n}",
+            "rawContentType": "application/json"
+          },
+          "contentType": "none"
+        },
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    }
+  ],
+  "environments": [],
+  "packages": []
+}

@@ -1,0 +1,3363 @@
+{
+  "info": {
+    "name": "When Light Breaks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "id": "8b532610-c322-418a-9a06-3e430d727ddd",
+      "name": "Albums",
+      "item": [
+        {
+          "id": "c9703c05-65de-4aa1-bdf6-5d00e66a4803",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\":\"{{$randomLoremWords}}\",\"coverUrl\":\"{{$randomImageUrl}}\",\"albumUrl\":\"{{$randomUrl}}\",\"artistId\":\"{{LAST_ARTIST_ID}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_ALBUM_ID\", pm.response.json().id)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "bc4794f9-b985-4b55-ad30-2f2336001cfe",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "67a1b0f7-0d67-4560-94bf-643087412a91",
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "d72dcb61-7fc7-42d7-ab1a-06c18e7b02b2",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "000f5e1a-7d26-4d1f-babd-095216326c5a",
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\":\"{{$randomLoremWords}}\",\"coverUrl\":\"{{$randomImageUrl}}\",\"albumUrl\":\"{{$randomUrl}}\",\"artistId\":\"{{LAST_ARTIST_ID}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "5f1c7e90-9e9f-4fad-99ed-9bc7647f3a3a",
+      "name": "Auth",
+      "item": [
+        {
+          "id": "59a2beae-020b-49b2-b306-b69d24067176",
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/login",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\":\"{{LAST_USERNAME}}\",\"password\":\"{{LAST_PASSWORD}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.environment.set(\"JWT\", pm.response.json().token)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "cf2c2e0c-a67d-4bd9-b364-b16cbfda751f",
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/register",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"firstName\":\"{{$randomFirstName}}\",\"lastName\":\"{{$randomLastName}}\",\"username\":\"{{$randomUserName}}\",\"password\":\"test1234567890\",\"email\":\"{{$randomEmail}}\",\"phone\":\"+12223334444\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_USERNAME\", pm.response.json().username)",
+                  "  pm.collectionVariables.set(\"LAST_PASSWORD\", pm.request.body.formdata[\"password\"])",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2a6da602-dd19-481e-b482-504883de3a6f",
+      "name": "API Keys",
+      "item": [
+        {
+          "id": "1980f653-b192-499d-a3cb-fec02cbbfcdd",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"{{$randomCompanyName}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_API_KEY_ID\", pm.response.json().id)",
+                  "  pm.environment.set(\"API_KEY\", pm.response.json().key)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "28f2f531-9713-419c-8acb-4003ae2290e5",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "b35629fe-5d28-4b2b-bcdf-3ff32f5d9b5c",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{JWT}}",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "{{JWT}}",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "id": "746baf22-4532-4af0-8c41-c914a6f16c5a",
+      "name": "Artists",
+      "item": [
+        {
+          "id": "8a83ea9c-04d5-4a7a-9b65-10895cfce6f0",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"{{$randomLoremWords}}\",\"artistUrl\":\"{{$randomUrl}}\",\"pictureUrl\":\"{{$randomImageUrl}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_ARTIST_ID\", pm.response.json().id)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "f7e53ef7-4a76-48fb-80d6-3dacd6918b5a",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "ac081706-7fd2-4113-bf6f-490517e58650",
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "ca3bc9e5-15a0-47c0-bd75-2e770f6d0ee1",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "60cf1b4f-546b-4b34-94dd-2c9a0c3e3e21",
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"{{$randomLoremWords}}\",\"artistUrl\":\"{{$randomUrl}}\",\"pictureUrl\":\"{{$randomImageUrl}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "2346cac0-344b-4f26-9f9e-76e5cbb980e1",
+      "name": "Concerts",
+      "item": [
+        {
+          "id": "30c53950-fd41-4b64-8833-66687268e6d4",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\":\"{{$randomLoremWords}}\",\"subtitle\":\"{{$randomLoremWords}}\",\"venue\":\"{{$randomLoremWord}}\",\"city\":\"{{$randomCity}}\",\"state\":\"{{$randomLoremWord}}\",\"country\":\"{{$randomCountry}}\",\"directionsUrl\":\"{{$randomUrl}}\",\"date\":\"{{$randomDatePast}}\",\"status\":\"available\",\"ticketsUrl\":\"{{$randomUrl}}\",\"artistId\":\"{{LAST_ARTIST_ID}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_CONCERT_ID\", pm.response.json().id)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "7a5a46cd-2d42-4f2b-a93f-41ee5c491d1d",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "f2ffbd65-5035-4657-8050-40fa4490f79f",
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "fcdc73b5-a716-4818-b6ff-c80454c163af",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "506e813e-9c4e-4485-ab63-6da53e5db80c",
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\":\"{{$randomLoremWords}}\",\"subtitle\":\"{{$randomLoremWords}}\",\"venue\":\"{{$randomLoremWord}}\",\"city\":\"{{$randomCity}}\",\"state\":\"{{$randomLoremWord}}\",\"country\":\"{{$randomCountry}}\",\"directionsUrl\":\"{{$randomUrl}}\",\"date\":\"{{$randomDatePast}}\",\"status\":\"available\",\"ticketsUrl\":\"{{$randomUrl}}\",\"artistId\":\"{{LAST_ARTIST_ID}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "0fd94d72-3cb5-445b-a656-3547450c9bea",
+      "name": "Invoices",
+      "item": [
+        {
+          "id": "a035298c-5c92-49d0-8012-e18301acfb1a",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"amount\":\"{{$randomPrice}}\",\"status\":\"pending\",\"userId\":\"{{LAST_USER_ID}}\",\"orderId\":\"{{LAST_ORDER_ID}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_INVOICE_ID\", pm.response.json().id)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "87160b30-2553-417a-8811-c1ede9bed095",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "b2028800-7cc9-4e9a-a77b-148211a5ed50",
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "e55de7f2-af30-4123-8c34-68544d19c3fb",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "7f71be00-5fb1-45c1-b565-233fc93d5561",
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"amount\":\"{{$randomPrice}}\",\"status\":\"pending\",\"userId\":\"{{LAST_USER_ID}}\",\"orderId\":\"{{LAST_ORDER_ID}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "a6f34aa4-ea7e-4f29-a1db-f3f6077dbfed",
+      "name": "Navigation Links",
+      "item": [
+        {
+          "id": "67ba8a58-b8f5-43f7-bbb7-556a5e2ca408",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"label\":\"{{$randomWord}}\",\"icon\":\"{{$randomWord}}\",\"url\":\"{{$randomUrl}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_NAVIGATION_LINK_ID\", pm.response.json().id)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "bd4efff4-0e84-4f0d-8276-979325308975",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "7cc55eba-5d91-467e-a8d1-c176a3c126c2",
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "209c453a-112a-4cc3-be7b-ac345ab41505",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "ab24f720-7550-4c17-963a-db9724877d1d",
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"label\":\"{{$randomWord}}\",\"icon\":\"{{$randomWord}}\",\"url\":\"{{$randomUrl}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "81073f18-e58c-4965-bdbb-405da97b5043",
+      "name": "Orders",
+      "item": [
+        {
+          "id": "ab7d3706-0135-4ab6-b6e0-024a50acc484",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"amount\":\"{{$randomPrice}}\",\"status\":\"pending\",\"userId\":\"{{LAST_USER_ID}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_ORDER_ID\", pm.response.json().id)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "12c3e8d9-e99c-4fc0-97cd-a069d104fb53",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "dc4b08e8-05d9-410d-be20-ec76ee4dbd5e",
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "d1a70f87-0e8a-423a-9add-892f77be8ac7",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "f66f5c1e-678d-44b4-82e4-9a2854d0ef79",
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"amount\":\"{{$randomPrice}}\",\"status\":\"pending\",\"userId\":\"{{LAST_USER_ID}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "7b3dcf88-c8bc-4fcd-a2ce-baf8fdb5b78c",
+      "name": "Products",
+      "item": [
+        {
+          "id": "e0490066-96db-4b7b-b7ac-b0ad6d0d78a8",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"{{$randomProductName}}\",\"description\":\"{{$randomLoremParagraphs}}\",\"price\":\"{{$randomPrice}}\",\"imageUrl\":\"{{$randomImageUrl}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_PRODUCT_ID\", pm.response.json().id)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "da297a94-c41d-49d5-86e6-7536bfa3b897",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "aaa03699-bf19-4842-a241-f0f5c53516a3",
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "9e57ef9b-a3c5-49f3-9883-7a49b4ef6c88",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "ce4e8650-cf28-4f35-957b-858d3b5c7f1d",
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"{{$randomProductName}}\",\"description\":\"{{$randomLoremParagraphs}}\",\"price\":\"{{$randomPrice}}\",\"imageUrl\":\"{{$randomImageUrl}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d5589181-118d-4ba4-9a48-f49adab4f722",
+      "name": "Social Links",
+      "item": [
+        {
+          "id": "9d0b1d0a-68fd-4f56-ad7a-c3b6b840a1d1",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"label\":\"{{$randomWord}}\",\"icon\":\"{{$randomWord}}\",\"url\":\"{{$randomUrl}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_SOCIAL_LINK_ID\", pm.response.json().id)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "dcae7677-d947-4ae0-b765-a7a1a8c4f513",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "9352cbed-9629-4a9c-806e-995df790a498",
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "5f59fdc9-77e7-4ce2-b292-199702502ceb",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "3408b0f8-7b13-4c84-b5a1-25e975a4589c",
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"label\":\"{{$randomWord}}\",\"icon\":\"{{$randomWord}}\",\"url\":\"{{$randomUrl}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "9ae0d468-e27d-465d-8993-fa89f0282328",
+      "name": "Songs",
+      "item": [
+        {
+          "id": "d221b669-bfaa-4fab-8763-ab3cc05496da",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\":\"{{$randomLoremWords}}\",\"coverUrl\":\"{{$randomImageUrl}}\",\"songUrl\":\"{{$randomUrl}}\",\"albumId\":\"{{LAST_ALBUM_ID}}\",\"artistId\":\"{{LAST_ARTIST_ID}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_SONG_ID\", pm.response.json().id)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "fc8a5f39-516b-406b-b17d-6aae0a81ea2b",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "3931284e-b987-4ac0-8469-026973a86efe",
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "25af8017-da45-4665-98f4-6854552e4959",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "a8410b76-38fd-4554-97d7-82f7779dba69",
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\":\"{{$randomLoremWords}}\",\"coverUrl\":\"{{$randomImageUrl}}\",\"songUrl\":\"{{$randomUrl}}\",\"albumId\":\"{{LAST_ALBUM_ID}}\",\"artistId\":\"{{LAST_ARTIST_ID}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "52942840-d90d-4e71-ae07-3cff8c19b90f",
+      "name": "Streaming Links",
+      "item": [
+        {
+          "id": "d715ddc5-40ff-4ebb-ade2-d1dedfcabb08",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"label\":\"{{$randomWord}}\",\"icon\":\"{{$randomWord}}\",\"url\":\"{{$randomUrl}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_STREAMING_LINK_ID\", pm.response.json().id)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "d2c54554-66c3-4b74-8d1f-ee663fbe7418",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "d68ff74a-71d7-4e11-ae44-5d38b4fbb7c8",
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "de9054cd-abc0-4110-b0f4-bda8ecafdee3",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "20876c50-cd38-4ee4-b2b4-8c6851a42a29",
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"label\":\"{{$randomWord}}\",\"icon\":\"{{$randomWord}}\",\"url\":\"{{$randomUrl}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "a848104b-2f3c-49c3-a896-d3c4412ca18e",
+      "name": "Users",
+      "item": [
+        {
+          "id": "fd9edc4b-1b58-49b3-be32-31971401180e",
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"firstName\":\"{{$randomFirstName}}\",\"lastName\":\"{{$randomLastName}}\",\"username\":\"{{$randomUserName}}\",\"password\":\"test1234567890\",\"email\":\"{{$randomEmail}}\",\"phone\":\"{{$randomPhoneNumber}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Learn more about scripts and snippets: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// **********************************************",
+                  "// Use JavaScript to visualize responses: https://docs.requestly.com/general/api-client/scripts",
+                  "// **********************************************",
+                  "",
+                  "try {",
+                  "  pm.collectionVariables.set(\"LAST_USER_ID\", pm.response.json().id)",
+                  "} catch (error) {",
+                  "  console.error(error)",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "facb6954-47d7-4fef-9669-3498f3d08132",
+          "name": "Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "df097f14-ac79-4c45-82ea-e5b00fe83576",
+          "name": "Get",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "cfeddc4a-f97c-40d1-89a0-262053dcdffc",
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}"
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "4c942c74-0241-473f-9126-1a5c805609fa",
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/{{ROUTE}}/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "{{ROUTE}}",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "{{LAST_ID}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"firstName\":\"{{$randomFirstName}}\",\"lastName\":\"{{$randomLastName}}\",\"username\":\"{{$randomUserName}}\",\"password\":\"{{PASSWORD}}\",\"email\":\"{{$randomEmail}}\",\"phone\":\"{{$randomPhoneNumber}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key",
+                  "type": "string"
+                },
+                {
+                  "key": "value",
+                  "value": "{{API_KEY}}",
+                  "type": "string"
+                },
+                {
+                  "key": "in",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{API_KEY}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "ROUTE",
+      "value": "albums",
+      "type": "string"
+    },
+    {
+      "key": "LAST_API_KEY_ID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "LAST_CONCERT_ID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "LAST_INVOICE_ID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "LAST_NAVIGATION_LINK_ID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "LAST_ORDER_ID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "LAST_PRODUCT_ID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "LAST_SOCIAL_LINK_ID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "LAST_SONG_ID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "LAST_STREAMING_LINK_ID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "LAST_USER_ID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "LAST_PASSWORD",
+      "value": "test1234567890",
+      "type": "string"
+    },
+    {
+      "key": "LAST_USERNAME",
+      "value": "Leann_Larkin53",
+      "type": "string"
+    },
+    {
+      "key": "LAST_ID",
+      "value": "fd52f93f-d47b-4afe-ba75-0ac7fc554659",
+      "type": "string"
+    },
+    {
+      "key": "LAST_ARTIST_ID",
+      "value": "259584e3-ca07-4c35-8a2b-f9848eb961b6",
+      "type": "string"
+    },
+    {
+      "key": "LAST_ALBUM_ID",
+      "value": "fb7a7078-13bd-48bf-b9c7-7f89b50f4eb3",
+      "type": "string"
+    }
+  ]
+}
