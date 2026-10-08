@@ -14,10 +14,10 @@ export const InvoiceTable = pgTable("invoice", {
     status: invoiceStatusEnum().notNull().default("pending"),
     userId: uuid()
         .notNull()
-        .references(() => UserTable.id, { onDelete: "restrict" }),
+        .references(() => UserTable.id, { onDelete: "cascade" }),
     orderId: uuid()
         .notNull()
-        .references(() => OrderTable.id, { onDelete: "restrict" }),
+        .references(() => OrderTable.id, { onDelete: "cascade" }),
     createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
 });

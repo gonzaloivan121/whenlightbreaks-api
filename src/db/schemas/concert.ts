@@ -23,7 +23,7 @@ export const ConcertTable = pgTable("concert", {
     ticketsUrl: text().notNull(),
     artistId: uuid()
         .notNull()
-        .references(() => ArtistTable.id, { onDelete: "restrict" }),
+        .references(() => ArtistTable.id, { onDelete: "cascade" }),
     createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
 });

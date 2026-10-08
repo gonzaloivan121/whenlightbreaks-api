@@ -13,7 +13,7 @@ export const OrderTable = pgTable("order", {
     status: orderStatusEnum().notNull().default("pending"),
     userId: uuid()
         .notNull()
-        .references(() => UserTable.id, { onDelete: "restrict" }),
+        .references(() => UserTable.id, { onDelete: "cascade" }),
     createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
 });

@@ -10,10 +10,10 @@ export const SongTable = pgTable("song", {
     songUrl: text().notNull(),
     albumId: uuid()
         .notNull()
-        .references(() => AlbumTable.id, { onDelete: "restrict" }),
+        .references(() => AlbumTable.id, { onDelete: "cascade" }),
     artistId: uuid()
         .notNull()
-        .references(() => ArtistTable.id, { onDelete: "restrict" }),
+        .references(() => ArtistTable.id, { onDelete: "cascade" }),
     createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
 });
