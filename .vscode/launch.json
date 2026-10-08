@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "npm run dev",
+            "name": "Run Server",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npm run build",
+            "name": "Build Server",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npm run start",
+            "name": "Start built Server",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npm run docker",
+            "name": "Start the Docker container",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npm run db:setup",
+            "name": "Generate and Migrate the database",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npm run db:studio",
+            "name": "Open Drizzle Studio",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+    ]
+}
