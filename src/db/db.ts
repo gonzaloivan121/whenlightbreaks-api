@@ -11,4 +11,4 @@ export const db = drizzle({
         password: env.DB_PASSWORD,
         port: env.DB_PORT,
     },
-})
+});
